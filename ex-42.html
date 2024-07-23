@@ -1,0 +1,57 @@
+<!-- یک تابع جاوا اسکریپت برای افزودن ردیف به جدول بنویسید -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="ex-42.css">
+
+</head>
+
+<body>
+
+    <div>
+
+        <table id="table">
+
+            <tr>
+
+                <td>row1 cell1</td>
+
+                <td>row1 cell2</td>
+
+            </tr>
+            <tr>
+
+                <td>row2 cell1</td>
+
+                <td>row2 cell2</td>
+
+            </tr>
+
+        </table>
+
+        <input type="button" value="Insert row" onclick="insertRow()">
+
+    </div>
+
+    <script>
+
+        let insertRow = () => {
+
+            let table = document.getElementById("table").insertRow(0);
+
+            let cell1 = table.insertCell(0);
+            let cell2 = table.insertCell(1);
+
+            cell1.innerHTML = "new cell1";
+            cell2.innerHTML = "new cell2";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
